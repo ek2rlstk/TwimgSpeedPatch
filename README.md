@@ -4,10 +4,10 @@ Hosts 파일을 수정해 트위터 미디어 로딩 속도를 비약적으로 �
 * [패치 받으러 가기](https://github.com/ek2rlstk/TwimgSpeedPatch/releases)
 
 ## Requires TwMediaCdnPatch!
-* [TwMediaCdnPatch 받으러 가기](https://github.com/ek2rlstk/TwimgCdnPatch/releases)
+* [TwMediaCdnPatch](https://github.com/ek2rlstk/TwimgCdnPatch/)
 
 ## 패치 방법
-패치와 TwMediaCdnPatch를 받고 같은 폴더에 넣어주세요.
+압축 파일을 풀고 TwSpeedPatch를 실행해 주세요.
 패치 버튼을 한번 누르면 패치가 진행되며, 한번 더 누르면 제거됩니다.
 
 ## 참고사항
