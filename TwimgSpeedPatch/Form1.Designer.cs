@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.patchButton = new System.Windows.Forms.Button();
-            this.unpatchButton = new System.Windows.Forms.Button();
             this.openHostFile = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,28 +45,13 @@
             this.patchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.patchButton.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.patchButton.ForeColor = System.Drawing.Color.Snow;
-            this.patchButton.Location = new System.Drawing.Point(383, 326);
+            this.patchButton.Location = new System.Drawing.Point(473, 327);
             this.patchButton.Name = "patchButton";
-            this.patchButton.Size = new System.Drawing.Size(115, 58);
+            this.patchButton.Size = new System.Drawing.Size(146, 58);
             this.patchButton.TabIndex = 1;
-            this.patchButton.Text = "패치하기";
+            this.patchButton.Text = "패치 or 제거하기";
             this.patchButton.UseVisualStyleBackColor = false;
             this.patchButton.Click += new System.EventHandler(this.PatchButton_Click);
-            // 
-            // unpatchButton
-            // 
-            this.unpatchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(157)))));
-            this.unpatchButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(90)))), ((int)(((byte)(130)))));
-            this.unpatchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.unpatchButton.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.unpatchButton.ForeColor = System.Drawing.Color.Snow;
-            this.unpatchButton.Location = new System.Drawing.Point(504, 326);
-            this.unpatchButton.Name = "unpatchButton";
-            this.unpatchButton.Size = new System.Drawing.Size(115, 58);
-            this.unpatchButton.TabIndex = 5;
-            this.unpatchButton.Text = "제거하기";
-            this.unpatchButton.UseVisualStyleBackColor = false;
-            this.unpatchButton.Click += new System.EventHandler(this.UnpatchButton_Click);
             // 
             // openHostFile
             // 
@@ -83,23 +68,13 @@
             this.openHostFile.UseVisualStyleBackColor = false;
             this.openHostFile.Click += new System.EventHandler(this.OpenHostFile_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::TwimgSpeedPatch.Properties.Resources.kyouka;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(755, 453);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // linkLabel1
             // 
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(157)))));
             this.linkLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.linkLabel1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(157)))));
-            this.linkLabel1.Location = new System.Drawing.Point(550, 303);
+            this.linkLabel1.Location = new System.Drawing.Point(550, 286);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(203, 19);
             this.linkLabel1.TabIndex = 7;
@@ -115,7 +90,7 @@
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel2.LinkColor = System.Drawing.Color.Black;
             this.linkLabel2.LinkVisited = true;
-            this.linkLabel2.Location = new System.Drawing.Point(440, 265);
+            this.linkLabel2.Location = new System.Drawing.Point(440, 248);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(313, 38);
             this.linkLabel2.TabIndex = 8;
@@ -124,15 +99,38 @@
             this.linkLabel2.VisitedLinkColor = System.Drawing.Color.Black;
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel2_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::TwimgSpeedPatch.Properties.Resources.kyouka;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(755, 453);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(157)))));
+            this.linkLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.linkLabel3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.linkLabel3.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(157)))));
+            this.linkLabel3.Location = new System.Drawing.Point(550, 305);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(203, 19);
+            this.linkLabel3.TabIndex = 9;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "https://twitter.com/ek2rlstk";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(752, 451);
+            this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.openHostFile);
-            this.Controls.Add(this.unpatchButton);
             this.Controls.Add(this.patchButton);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,7 +139,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TwitterSpeedPatch @sokcuri - 2019.6";
+            this.Text = "TwitterSpeedPatch";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -151,10 +149,10 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button patchButton;
-        private System.Windows.Forms.Button unpatchButton;
         private System.Windows.Forms.Button openHostFile;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel3;
     }
 }
 

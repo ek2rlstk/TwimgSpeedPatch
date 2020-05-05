@@ -25,10 +25,6 @@ namespace TwimgSpeedPatch
             HostFileManager.Patch();
         }
 
-        private void UnpatchButton_Click(object sender, EventArgs e)
-        {
-            HostFileManager.UnPatch();
-        }
 
         private void OpenHostFile_Click(object sender, EventArgs e)
         {
