@@ -17,4 +17,5 @@ Hosts 파일을 수정해 트위터 미디어 로딩 속도를 비약적으로 �
 
 ## Thanks to
 sokcuri (https://github.com/sokcuri/)
+
 RyuaNerin (https://github.com/RyuaNerin)
