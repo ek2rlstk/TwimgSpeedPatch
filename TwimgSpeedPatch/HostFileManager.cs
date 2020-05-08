@@ -19,9 +19,14 @@ namespace TwimgSpeedPatch
             
         }
 
-        public static void Patch()
+        public static Process Patch()
         {
-            Process.Start(System.Windows.Forms.Application.StartupPath+@"\TwMediaCdnPatch.exe");
+            var ps = new ProcessStartInfo(Application.StartupPath + @"\TwMediaCdnPatch.exe");
+            ps.CreateNoWindow = true;
+            ps.UseShellExecute = false;
+            ps.RedirectStandardError = true;
+            ps.RedirectStandardOutput = true;
+            return Process.Start(ps);
         }
 
         public static void OpenHostFile()

@@ -35,6 +35,7 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.status = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +75,7 @@
             this.linkLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.linkLabel1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(157)))));
-            this.linkLabel1.Location = new System.Drawing.Point(550, 286);
+            this.linkLabel1.Location = new System.Drawing.Point(511, 265);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(203, 19);
             this.linkLabel1.TabIndex = 7;
@@ -90,12 +91,12 @@
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel2.LinkColor = System.Drawing.Color.Black;
             this.linkLabel2.LinkVisited = true;
-            this.linkLabel2.Location = new System.Drawing.Point(440, 248);
+            this.linkLabel2.Location = new System.Drawing.Point(511, 220);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(313, 38);
+            this.linkLabel2.Size = new System.Drawing.Size(203, 38);
             this.linkLabel2.TabIndex = 8;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "트위터 속도 패치 by 소쿠릿";
+            this.linkLabel2.Text = "트위터 속도 패치";
             this.linkLabel2.VisitedLinkColor = System.Drawing.Color.Black;
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel2_Click);
             // 
@@ -115,18 +116,31 @@
             this.linkLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.linkLabel3.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.linkLabel3.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(116)))), ((int)(((byte)(157)))));
-            this.linkLabel3.Location = new System.Drawing.Point(550, 305);
+            this.linkLabel3.Location = new System.Drawing.Point(511, 284);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(203, 19);
             this.linkLabel3.TabIndex = 9;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "https://twitter.com/ek2rlstk";
             // 
+            // status
+            // 
+            this.status.BackColor = System.Drawing.Color.White;
+            this.status.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status.Location = new System.Drawing.Point(12, 143);
+            this.status.Multiline = true;
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            this.status.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.status.Size = new System.Drawing.Size(418, 296);
+            this.status.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(752, 451);
+            this.Controls.Add(this.status);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
@@ -142,6 +156,7 @@
             this.Text = "TwitterSpeedPatch";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -153,6 +168,7 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.TextBox status;
     }
 }
 

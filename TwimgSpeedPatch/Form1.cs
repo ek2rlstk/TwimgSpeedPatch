@@ -14,7 +14,6 @@ namespace TwimgSpeedPatch
 {
     public partial class Form1 : Form
     {
-
         public Form1()
         {
             InitializeComponent();
@@ -22,7 +21,12 @@ namespace TwimgSpeedPatch
 
         private void PatchButton_Click(object sender, EventArgs e)
         {
-            HostFileManager.Patch();
+            Process pps = HostFileManager.Patch();
+            pps.BeginOutputReadLine();
+            pps.BeginErrorReadLine();
+            pps.OutputDataReceived += (object send, DataReceivedEventArgs ee) => status.AppendText(ee.Data + Environment.NewLine);
+            pps.ErrorDataReceived += (object send, DataReceivedEventArgs ee) => status.AppendText(ee.Data + Environment.NewLine);
+            pps.WaitForExit();
         }
 
 
@@ -38,7 +42,7 @@ namespace TwimgSpeedPatch
 
         private void LinkLabel2_Click(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com/sokcuri/TwimgSpeedPatch");
+            Process.Start("https://twitter.com/ek2rlstk");
         }
     }
 }
